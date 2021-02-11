@@ -1,12 +1,10 @@
 // 1. use strict (added in ES5)
 // use this for Vanila Javascript
-
 "use strict";
 
 // 2. Variables (변수)
 // let (added in ES6)
 // mutable variable
-
 let name = "ellie"; // 변수 선언
 console.log(name); // ellie 출력
 name = "hello"; // 변수 값 재할당시 따로 let을 붙일 필요없음
@@ -42,13 +40,11 @@ console.log(name);
 // >> 값을 가르키는 reference를 메모리에 저장
 // >> 참조 타입
 // 변수에 할당 가능, 함수의 인자로 전달, return 타입으로 리턴 가능
-
 const count = 17; // integer > type: number
 const size = 17.1; // decimal number > type: number
 console.log(`value: ${count}, type : ${typeof count}`);
 
 // number - special numeric values: infinity, -infinity, NaN(not a number)
-
 const infinity = 1 / 0;
 const negativeInfinity = -1 / 0;
 const nAn = "not a number" / 2;
@@ -58,12 +54,10 @@ console.log(nAn); // NaN
 
 // bigint (fairy new, don't use it yet)
 // JS의 숫자 범위는 2**(-53) ~ 2**%53
-
 const bigInt = 123456789012345678901234567890n; // 맨뒤에 n 적어야함
 console.log(`value : ${bigInt}, type: ${typeof bigInt}`);
 
 // string
-
 const char = "c";
 const brendan = "brendan";
 const greeting = "hello " + brendan;
@@ -73,7 +67,6 @@ console.log(helloBob); //hi brendan!
 
 // template literals (string)
 // 연산자 사용 없이 한번에 문자열 표현 가능
-
 `value : ${brendan}, type : ${typeof brendan}`; // 작은따옴표 아님
 "value :" + brendan + "type :" + typeof brendan; // 상당히 번거로움
 
@@ -93,7 +86,6 @@ console.log(helloBob); //hi brendan!
 // create unique identifiers for object
 // 고유한 식별자, 우선 순위 부여
 // 동일한 ID이더라도 다른 ID로 식별
-
 const symbol1 = Symbol("id");
 const symbol2 = Symbol("id");
 console.log(symbol1 === symbol2); // false
@@ -101,3 +93,10 @@ const gsymbol1 = Symbol.for("id");
 const gsymbol2 = Symbol.for("id");
 console.log(`value: ${symbol1.description}, type : ${typeof symbol1}`); // 문자열로 바꿔서 출력
 // value : id, type : symbol
+
+// 5. Dynamic typing : dynamically typed language > return 때 변수의 type이 계속 바뀔수 있음
+let text = "7" + 5; // 75(문자열)
+text = "7" + "5"; // 75(문자열)
+text = "7" / "5";
+// 1.4 (number)
+console.log(text);
