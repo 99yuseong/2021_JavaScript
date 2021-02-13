@@ -209,22 +209,21 @@ console.log(helloBob); //hi brendan!
 //      > 타입이자 값을 나타냄
 //      > value : undefined, type : undefined
 
+// (잘 모르겠는 개념)
 // 1.5 symbol (added in ES6)
 //  > 이름의 충돌 위험이 없는 유일한 객체의 프로퍼티 키(property key)를 만들기 위해 사용
 //  > immutable variable (변경불가능)
 
 // 1.5.1 symbol의 생성
-//  > Symbol() 함수를 이용해 생성
-//  >
+//  > Symbol() 함수를 이용해 호출될 때마다 값 생성
+//  > 문자열을 인자로 전달가능
 
-//poiemaweb.com/es6-symbol
-https: //includestdio.tistory.com/26
-
-// Symbol
+// 1.5.2 Symbol의 사용
 // create unique identifiers for object
 // 고유한 식별자, 우선 순위 부여
 // 동일한 ID이더라도 다른 ID로 식별
-https: const symbol1 = Symbol("id");
+// 즉, 유일한 값이므로 Symbol 값을 키로 받는 프로퍼티는 어떠한 프로퍼티와 충돌 X
+const symbol1 = Symbol("id");
 const symbol2 = Symbol("id");
 console.log(symbol1 === symbol2); // false
 const gsymbol1 = Symbol.for("id");
